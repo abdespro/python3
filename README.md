@@ -1132,3 +1132,214 @@ for number in range(1, 10):
     7  is happy!
     8  is unhappy!
     9  is unhappy!
+
+## sunny numbers
+
+
+```python
+# sunny numbers
+# N = 8
+# N + 1 = 9 (perfect square)
+
+from math import sqrt
+
+def is_sunny(number):
+    sqrt_of_num_plus_one = sqrt(number + 1)
+    if int(sqrt_of_num_plus_one) == sqrt_of_num_plus_one:
+        return True
+    return False
+
+for number in range(1, 101):
+    if is_sunny(number):
+        print(number, " is a sunny number")
+```
+
+    3  is a sunny number
+    8  is a sunny number
+    15  is a sunny number
+    24  is a sunny number
+    35  is a sunny number
+    48  is a sunny number
+    63  is a sunny number
+    80  is a sunny number
+    99  is a sunny number
+
+
+## fascinating number
+
+
+```python
+# fascinating number 
+# 192
+# 192 * 2 = 384
+# 192 * 3 = 576
+# 192 384 576
+# 123456789
+# fascinating, isn't it?
+
+def is_fascinating(number):
+    if number < 100:
+        return False
+    one_to_nine = '123456789'
+    number_mul_two = number * 2
+    number_mul_three = number * 3
+    concat_num_num2_num3 = "".join(sorted(list(str(number) + str(number_mul_two) +  str(number_mul_three))))
+    if concat_num_num2_num3 == one_to_nine:
+        return True
+    return False
+    
+
+for number in range(100, 1001):
+    if is_fascinating(number):
+        print(number, " is fascinating!")
+```
+
+    192  is fascinating!
+    219  is fascinating!
+    273  is fascinating!
+    327  is fascinating!
+
+
+## disarium number
+
+
+```python
+# disarium number
+
+def is_disarium(number):
+    temporary = number
+    sum_of_powered_digits = 0
+    power = len(str(number))
+    while temporary > 0:
+        sum_of_powered_digits += (temporary % 10) ** power
+        temporary = temporary // 10
+        power = power - 1
+        
+    if sum_of_powered_digits == number:
+        return True
+    return False
+
+for number in range(80,1001):
+    if is_disarium(number):
+        print(number, " is disarium!")
+```
+
+    89  is disarium!
+    135  is disarium!
+    175  is disarium!
+    518  is disarium!
+    598  is disarium!
+
+
+## pronic number
+
+
+```python
+# pronic number
+# 42
+# 6 * 7 => n(n+1) => 42
+
+def is_pronic(number):
+    for n in range(number + 1):
+        if n * (n + 1) == number:
+            return True
+    return False
+
+for number in range(0, 101):
+    if is_pronic(number):
+        print(number, " is pronic!")
+```
+
+    0  is pronic!
+    2  is pronic!
+    6  is pronic!
+    12  is pronic!
+    20  is pronic!
+    30  is pronic!
+    42  is pronic!
+    56  is pronic!
+    72  is pronic!
+    90  is pronic!
+
+
+## trimorphic number
+
+
+```python
+# trimorphic number
+# 5
+# 5 * 5 * 5 = 12(5)
+
+def is_trimorphic(number):
+    cube_of_number = number ** 3
+    temporary = number
+    while temporary > 0:
+        if cube_of_number % 10 == temporary % 10:
+            cube_of_number = cube_of_number // 10
+            temporary = temporary // 10
+            continue
+        else:
+            return False
+    return True
+
+for number in range(1, 50):
+    if is_trimorphic(number):
+        print(number, " is trimorphic!")
+```
+
+    1  is trimorphic!
+    4  is trimorphic!
+    5  is trimorphic!
+    6  is trimorphic!
+    9  is trimorphic!
+    24  is trimorphic!
+    25  is trimorphic!
+    49  is trimorphic!
+
+
+## evil-odious number
+
+
+```python
+# evil number
+# odious number
+# 3 - evil number
+# binary(3) = 11
+# two 1s => even
+# 16 - odious number
+# binary(16) = 10000
+# one 1 => odd
+
+def binary(decimal):
+    bin_out = list()
+    while decimal > 0:
+        bin_out.append(decimal%2)
+        decimal = decimal // 2
+    return bin_out
+
+def is_evil(number):
+    count_one = 0
+    for element in binary(number):
+        if element == 1:
+            count_one += 1
+    if count_one % 2 == 0:
+        return True
+    return False
+
+for number in range(1, 11):
+    if is_evil(number):
+        print(number, " is evil!")
+    else:
+        print(number, " is odious!")
+```
+
+    1  is odious!
+    2  is odious!
+    3  is evil!
+    4  is odious!
+    5  is evil!
+    6  is evil!
+    7  is odious!
+    8  is odious!
+    9  is evil!
+    10  is evil!
