@@ -1,3 +1,4 @@
+visit <a href="https://abdespro.github.io/python3/built_in_functions_one.html" target="_blank">built_in_functions</a>
 # examples
 ## hello python
 
