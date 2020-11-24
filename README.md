@@ -1343,3 +1343,206 @@ for number in range(1, 11):
     8  is odious!
     9  is evil!
     10  is evil!
+
+## floyd triangle
+
+
+```python
+# floyd triangle
+#  1
+#  2  3
+#  4  5  6
+#  7  8  9  10
+#  11 12 13 14 15
+
+def floyd(number_of_lines):
+    element = 1
+    for line in range(0, number_of_lines+1):
+        for num_of_element in range(0, line):
+            print(element,end=" ")
+            element = element + 1
+        print()
+        
+floyd(5)    
+```
+
+    
+    1 
+    2 3 
+    4 5 6 
+    7 8 9 10 
+    11 12 13 14 15 
+
+
+## reverse the number
+
+
+```python
+# reverse the number
+
+def reverse(number):
+    reversed_number = 0
+    while number > 0:
+        remainder = number % 10
+        reversed_number = reversed_number * 10 + remainder
+        number = number // 10
+    return reversed_number
+
+number = int(input("Enter a number: "))
+print("reverse of ", number, ": ", reverse(number))
+```
+
+    Enter a number:  1458
+
+
+    reverse of  1458 :  8541
+
+
+
+```python
+# previous one will not work 
+# for some number like 1240
+# reverse(1240) => 421
+
+def true_reverse(number):
+    list_reversed = list()
+    while number > 0:
+        list_reversed.append(str(number % 10))
+        number = number // 10
+    return "".join(list_reversed)
+
+for number in range(100, 111):
+    print(f"reverse of {number}: {true_reverse(number)}")
+```
+
+    reverse of 100: 001
+    reverse of 101: 101
+    reverse of 102: 201
+    reverse of 103: 301
+    reverse of 104: 401
+    reverse of 105: 501
+    reverse of 106: 601
+    reverse of 107: 701
+    reverse of 108: 801
+    reverse of 109: 901
+    reverse of 110: 011
+
+
+## sum of digits
+
+
+```python
+# sum of digits
+
+def sum_of_digits(number):
+    sumofd = 0
+    while number > 0:
+        sumofd = sumofd + (number % 10)
+        number = number // 10
+    return sumofd
+
+for number in range(123, 130):
+    print(f"sum of digits of {number}: {sum_of_digits(number)}")
+```
+
+    sum of digits of 123: 6
+    sum of digits of 124: 7
+    sum of digits of 125: 8
+    sum of digits of 126: 9
+    sum of digits of 127: 10
+    sum of digits of 128: 11
+    sum of digits of 129: 12
+
+
+## manual exponent
+
+
+```python
+# manual to the power operation
+
+def powerof(number, exponent):
+    result = 1
+    for e in range(exponent):
+        result = result*number
+    return result
+
+for number in range(2, 4):
+    for power in range(1, 4):
+        print(f"pow({number},{power}) = {powerof(number, power)}")
+    print()
+```
+
+    pow(2,1) = 2
+    pow(2,2) = 4
+    pow(2,3) = 8
+    
+    pow(3,1) = 3
+    pow(3,2) = 9
+    pow(3,3) = 27
+    
+
+
+## count the number of digits
+
+
+```python
+# number of digits
+
+def count_digits(number):
+    count = 0
+    while number > 0:
+        count = count + 1
+        number = number // 10
+    return count
+
+for number in range(95, 106, 3):
+    print(f"number of digits in {number}: {count_digits(number)}")
+```
+
+    number of digits in 95: 2
+    number of digits in 98: 2
+    number of digits in 101: 3
+    number of digits in 104: 3
+
+
+## check anagram
+
+
+```python
+# check anagram
+# listen <> silent
+def CheckAnagram(string1, string2):
+    for letter in string1:
+        if not letter in string2:
+            return False
+    return True
+
+print("'listen' is anagram of 'silent': ", CheckAnagram('listen', 'silent'))
+```
+
+    'listen' is anagram of 'silent':  True
+
+
+## super digit
+
+
+```python
+# super digit
+# super_digit(1234) => (1+2+3+4) = 10 => (1+0) = 1
+
+def superdigitof(number):
+    # base_case
+    if number % 10 == number:
+        return number
+    sum_of_digits = 0
+    while number > 0:
+        sum_of_digits = sum_of_digits + (number % 10)
+        number = number // 10
+    return superdigitof(sum_of_digits)
+
+print("super digit of 124587: ", superdigitof(124587))
+print("super digit of 9875: ",superdigitof(9875))
+```
+
+    super digit of 124587:  9
+    super digit of 9875:  2
