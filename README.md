@@ -783,3 +783,178 @@ else:
 
 
     The number is not a palindrome!
+```python
+# pascal triangle 
+# using factorial & combination 
+
+def factorial(number):
+    if number == 0:
+        return 1
+    # base_case
+    elif number == 1:
+        return number
+    else:
+        return number * factorial(number - 1)
+    
+def combination(n, r):
+    return ((factorial(n)) // (factorial(r) * factorial(n - r)))
+
+def pascal(rows):
+    for numrow in range(0, rows+1):
+        for r in range(0, numrow+1):
+           print(combination(numrow, r), end=" ")
+        print()
+
+NumRows = int(input("Enter the number of rows: "))
+
+
+pascal(NumRows)
+```
+
+    Enter the number of rows:  6
+
+
+    1 
+    1 1 
+    1 2 1 
+    1 3 3 1 
+    1 4 6 4 1 
+    1 5 10 10 5 1 
+    1 6 15 20 15 6 1 
+
+
+
+```python
+# Leap year
+
+def is_leap_year(year):
+    if year % 4 == 0 and year % 100 != 0:
+        return True
+    elif year % 100 == 0 and year % 400 == 0:
+        return True
+    else:
+        return False
+    
+print(is_leap_year(int(input("Enter a year: "))))
+```
+
+    Enter a year:  1600
+
+
+    True
+
+
+
+```python
+# perfect number
+# sum of factors (except the number itself) = number
+
+def is_perfect(number):
+    sum_of_divisors = 0
+    for divisor in range(1, number):
+        if number % divisor == 0:
+            sum_of_divisors += divisor
+    if sum_of_divisors == number:
+        return True
+    return False
+
+for number in range(1, 10000):
+    if is_perfect(number):
+        print(number, " is perfect")
+```
+
+    6  is perfect
+    28  is perfect
+    496  is perfect
+    8128  is perfect
+
+
+
+```python
+# armstrong number
+# cube of digits = number
+
+def is_armstrong(number):
+    num_list = list(number)
+    sum_of_digits = 0
+    for element in num_list:
+        sum_of_digits += int(element) * int(element) * int(element)
+    
+    if int(number) == sum_of_digits:
+        return True
+    return False
+
+for number in range(1, 1000000):
+    if is_armstrong(str(number)):
+        print(number, " is an armstrong!")
+```
+
+    1  is an armstrong!
+    153  is an armstrong!
+    370  is an armstrong!
+    371  is an armstrong!
+    407  is an armstrong!
+
+
+
+```python
+# strong number
+# 145 = 1! + 4! + 5!
+
+def factorial(number):
+    if number == 0:
+        return 1
+    # base_case
+    elif number == 1:
+        return number
+    else:
+        return number * factorial(number - 1)
+    
+def is_strong(number):
+    num_list = list(number)
+    sum_of_factorial_of_digits = 0
+    for element in num_list:
+        sum_of_factorial_of_digits += factorial(int(element))
+    if sum_of_factorial_of_digits == int(number):
+        return True
+    return False
+
+for number in range(1, 1000000):
+    if is_strong(str(number)):
+        print(number, " is strong!")
+```
+
+    1  is strong!
+    2  is strong!
+    145  is strong!
+    40585  is strong!
+
+
+
+```python
+# automorphic number
+# 25*25 = 6(25)
+
+def is_automorphic(number):
+    square = number * number
+    temporary = number
+    while temporary > 0:
+        if temporary % 10 == square % 10:
+            temporary = temporary// 10
+            square = square//10
+        else:
+            return False
+    return True
+
+for number in range(1, 1000):
+    if is_automorphic(number):
+        print(number, " is automorphic!")
+```
+
+    1  is automorphic!
+    5  is automorphic!
+    6  is automorphic!
+    25  is automorphic!
+    76  is automorphic!
+    376  is automorphic!
+    625  is automorphic!
