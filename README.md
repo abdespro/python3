@@ -1,4 +1,7 @@
 # examples
+## hello python
+
+
 ```python
 # hello python
 print("Hello Python!")
@@ -6,6 +9,8 @@ print("Hello Python!")
 
     Hello Python!
 
+
+## if statement
 
 
 ```python
@@ -20,6 +25,8 @@ if x > y:
 
     X is greater than Y.
 
+
+## if-else 
 
 
 ```python
@@ -36,6 +43,8 @@ else:
 
     The number is 1
 
+
+## more if-else
 
 
 ```python
@@ -54,6 +63,8 @@ else:
     Number is greater than 50!
 
 
+## again if-else
+
 
 ```python
 # if-else
@@ -71,6 +82,8 @@ else:
     Welcome to earth, human!
 
 
+## much more if-else
+
 
 ```python
 # if-else
@@ -87,6 +100,8 @@ else:
 
     You are eligible for voting!
 
+
+## if-elif-else
 
 
 ```python
@@ -115,6 +130,8 @@ else:
     Grade 'A'
 
 
+## nested if
+
 
 ```python
 # nested if
@@ -136,6 +153,8 @@ else:
     The number is greater than 20!
     The number is also odd!
 
+
+## switch-case 
 
 
 ```python
@@ -164,6 +183,8 @@ print('Tomar prodotto input: ',num2wordbeng.get(usrinp, 'Invalid Input'))
     Tomar prodotto input:  Panch
 
 
+## using for loop to access elements
+
 
 ```python
 # for loop-accessing elements
@@ -186,6 +207,8 @@ for prog in lang:
 
     python| c++| c| java| c#| assembly| vb.net| php| javascript| 
 
+## using for loop to access characters in a string
+
 
 ```python
 # for loop-accessing chars in string
@@ -195,6 +218,8 @@ for char in 'python-programming':
 ```
 
     p| y| t| h| o| n| -| p| r| o| g| r| a| m| m| i| n| g| 
+
+## using for loop to print square of numbers
 
 
 ```python
@@ -216,6 +241,8 @@ for number in range(1, 11):
     Square of:  10  is  100
 
 
+## using for loop to print even numbers
+
 
 ```python
 # for loop-print even numbers
@@ -229,9 +256,11 @@ for num in range(1, 26):
     Even numbers between 1 to 25!
     2| 4| 6| 8| 10| 12| 14| 16| 18| 20| 22| 24| 
 
+## using for loop to print multiplication table
+
 
 ```python
-# for loop-print multiplicative table
+# for loop-print multiplication table
 
 thenum = int(input("Enter a number: "))
 for x in range(1, 11):
@@ -253,6 +282,8 @@ for x in range(1, 11):
     190
 
 
+## use else with for
+
 
 ```python
 # for-else 
@@ -271,6 +302,8 @@ else:
     End of loop!
 
 
+## using range function 1
+
 
 ```python
 # range function 1
@@ -285,6 +318,8 @@ for y in range(5):
     3
     4
 
+
+## using range function 2
 
 
 ```python
@@ -304,6 +339,8 @@ for z in range(2, 10):
     9
 
 
+## using range function 3
+
 
 ```python
 # range function 3
@@ -319,6 +356,8 @@ for odd in range(1, 10, 2):
     9
 
 
+## using range function 4
+
 
 ```python
 # range function 4
@@ -333,6 +372,8 @@ for even in range(10, 1, -2):
     4
     2
 
+
+## while loop begins
 
 
 ```python
@@ -363,6 +404,8 @@ print("You are out of the loop.")
     You are out of the loop.
 
 
+## more while loop
+
 
 ```python
 # while loop
@@ -379,6 +422,8 @@ while c <= 5:
     4
     5
 
+
+## much more while loop
 
 
 ```python
@@ -411,6 +456,8 @@ print("End of program")
     End of program
 
 
+## use else with while
+
 
 ```python
 # while-else 
@@ -429,6 +476,8 @@ else:
     4 is less than 5.
     End of program.
 
+
+## nested loop
 
 
 ```python
@@ -452,6 +501,8 @@ for x in range(1, 11):
     010 020 030 040 050 060 070 080 090 100 
 
 
+## break the loop
+
 
 ```python
 # break
@@ -463,6 +514,8 @@ for digit in range(10):
 ```
 
     0| 1| 2| 3| 4| 
+
+## continue the loop
 
 
 ```python
@@ -481,6 +534,8 @@ for digit in range(6):
     4
     5
 
+
+## break & continue 
 
 
 ```python
@@ -526,6 +581,8 @@ while True:
     End of program. Thank you!
 
 
+## pass it
+
 
 ```python
 # Empty loop
@@ -540,424 +597,3 @@ def func():
 class NewClass:
     pass
 ```
-```python
-# number is even or odd
-
-number = int(input("Enter a number: "))
-if number % 2 == 0:
-    print(f"{number} is even")
-else:
-    print(f"{number} is odd")
-```
-
-    Enter a number:  5
-
-
-    5 is odd
-
-
-
-```python
-# factorial using recursion
-
-def factorial(num):
-    if num < 0:
-        return "Invalid input!"
-    elif num == 0:
-        return 1
-    # base_case
-    elif num == 1:
-        return num
-    else:
-        return num * factorial(num - 1)
-    
-number = int(input("Enter a number: "))
-print(f"Factorial of {number}: ", factorial(number))
-```
-
-    Enter a number:  5
-
-
-    Factorial of 5:  120
-
-
-
-```python
-# prime numbers 
-# naive algorithm 
-
-number = int(input("Enter any number: "))
-if number > 1:
-    for x in range(2, number):
-        if number % x == 0:
-            print(number, " is not a prime number!")
-            break
-    else:
-        print(number, " is a prime number!")
-else:
-    print(number, " is not a prime number!")
-```
-
-    Enter any number:  3
-
-
-    3  is a prime number!
-
-
-
-```python
-# Largest among n digits
-
-ncollection = list()
-num = int(input("Enter number of elements: "))
-for i in range(1, num+1):
-    usrinp = int(input(f"Enter element {i}: "))
-    ncollection.append(usrinp)
-ncollection.sort()
-print("Largest number: ", ncollection[-1])
-```
-
-    Enter number of elements:  5
-    Enter element 1:  23
-    Enter element 2:  45
-    Enter element 3:  65
-    Enter element 4:  100
-    Enter element 5:  2
-
-
-    Largest number:  100
-
-
-
-```python
-# swap two numbers without using third variable
-
-num1 = 25
-num2 = 52
-
-print("num1: ", num1)
-print("num2: ", num2)
-print()
-(num1, num2) = (num2, num1)
-
-print("num1: ", num1)
-print("num2: ", num2)
-```
-
-    num1:  25
-    num2:  52
-    
-    num1:  52
-    num2:  25
-
-
-
-```python
-# swap two numbers 
-# another method
-# without using third variable 
-
-num1 = 25
-num2 = 52
-
-print("num1: ", num1)
-print("num2: ", num2)
-print()
-
-num1 = num1 + num2 # 77
-num2 = num1 - num2 # 77 - 52 = 25
-num1 = num1 - num2 # 77 - 25 = 52
-
-print("num1: ", num1)
-print("num2: ", num2)
-```
-
-    num1:  25
-    num2:  52
-    
-    num1:  52
-    num2:  25
-
-
-
-```python
-# swap two numbers 
-# using a third temporary variable
-
-num1 = 25
-num2 = 52
-
-print("num1: ", num1)
-print("num2: ", num2)
-print()
-
-temp = num1
-num1 = num2
-num2 = temp
-
-print("num1: ", num1)
-print("num2: ", num2)
-```
-
-    num1:  25
-    num2:  52
-    
-    num1:  52
-    num2:  25
-
-
-
-```python
-# Fibonacci sequence 
-# using recursion
-# limited - without memoization
-
-def fibonacci(num):
-    # base_case
-    if num <= 1:
-        return num
-    else:
-        return fibonacci(num-1) + fibonacci(num-2)
-    
-# 0, 1, 1, 2, 3, 5, 8
-number_of_terms = 10
-print("Fibonacci Sequence")
-for x in range(number_of_terms):
-    print(fibonacci(x))
-```
-
-    Fibonacci Sequence
-    0
-    1
-    1
-    2
-    3
-    5
-    8
-    13
-    21
-    34
-
-
-
-```python
-# check palindrome - string
-
-string = input("Enter a word: ")
-string = string.casefold()
-reverse_string = reversed(string)
-
-if list(string) == list(reverse_string):
-    print("the word is a palindrome")
-else:
-    print("the word is not a palindrome")
-```
-
-    Enter a word:  abir
-
-
-    the word is not a palindrome
-
-
-
-```python
-# check palindrome - number
-
-number = int(input("Enter a number: "))
-temporary = number
-reverse = 0
-
-while temporary > 0:
-    remainder = temporary % 10
-    reverse = reverse*10 + remainder
-    temporary = temporary // 10
-    
-if reverse == number:
-    print("The number is a palindrome!")
-else:
-    print("The number is not a palindrome!")
-
-```
-
-    Enter a number:  155
-
-
-    The number is not a palindrome!
-
-
-
-```python
-# pascal triangle 
-# using factorial & combination 
-
-def factorial(number):
-    if number == 0:
-        return 1
-    # base_case
-    elif number == 1:
-        return number
-    else:
-        return number * factorial(number - 1)
-    
-def combination(n, r):
-    return ((factorial(n)) // (factorial(r) * factorial(n - r)))
-
-def pascal(rows):
-    for numrow in range(0, rows+1):
-        for r in range(0, numrow+1):
-           print(combination(numrow, r), end=" ")
-        print()
-
-NumRows = int(input("Enter the number of rows: "))
-
-
-pascal(NumRows)
-```
-
-    Enter the number of rows:  6
-
-
-    1 
-    1 1 
-    1 2 1 
-    1 3 3 1 
-    1 4 6 4 1 
-    1 5 10 10 5 1 
-    1 6 15 20 15 6 1 
-
-
-
-```python
-# Leap year
-
-def is_leap_year(year):
-    if year % 4 == 0 and year % 100 != 0:
-        return True
-    elif year % 100 == 0 and year % 400 == 0:
-        return True
-    else:
-        return False
-    
-print(is_leap_year(int(input("Enter a year: "))))
-```
-
-    Enter a year:  1600
-
-
-    True
-
-
-
-```python
-# perfect number
-# sum of factors (except the number itself) = number
-
-def is_perfect(number):
-    sum_of_divisors = 0
-    for divisor in range(1, number):
-        if number % divisor == 0:
-            sum_of_divisors += divisor
-    if sum_of_divisors == number:
-        return True
-    return False
-
-for number in range(1, 10000):
-    if is_perfect(number):
-        print(number, " is perfect")
-```
-
-    6  is perfect
-    28  is perfect
-    496  is perfect
-    8128  is perfect
-
-
-
-```python
-# armstrong number
-# cube of digits = number
-
-def is_armstrong(number):
-    num_list = list(number)
-    sum_of_digits = 0
-    for element in num_list:
-        sum_of_digits += int(element) * int(element) * int(element)
-    
-    if int(number) == sum_of_digits:
-        return True
-    return False
-
-for number in range(1, 1000000):
-    if is_armstrong(str(number)):
-        print(number, " is an armstrong!")
-```
-
-    1  is an armstrong!
-    153  is an armstrong!
-    370  is an armstrong!
-    371  is an armstrong!
-    407  is an armstrong!
-
-
-
-```python
-# strong number
-# 145 = 1! + 4! + 5!
-
-def factorial(number):
-    if number == 0:
-        return 1
-    # base_case
-    elif number == 1:
-        return number
-    else:
-        return number * factorial(number - 1)
-    
-def is_strong(number):
-    num_list = list(number)
-    sum_of_factorial_of_digits = 0
-    for element in num_list:
-        sum_of_factorial_of_digits += factorial(int(element))
-    if sum_of_factorial_of_digits == int(number):
-        return True
-    return False
-
-for number in range(1, 1000000):
-    if is_strong(str(number)):
-        print(number, " is strong!")
-```
-
-    1  is strong!
-    2  is strong!
-    145  is strong!
-    40585  is strong!
-
-
-
-```python
-# automorphic number
-# 25*25 = 6(25)
-
-def is_automorphic(number):
-    square = number * number
-    temporary = number
-    while temporary > 0:
-        if temporary % 10 == square % 10:
-            temporary = temporary// 10
-            square = square//10
-        else:
-            return False
-    return True
-
-for number in range(1, 1000):
-    if is_automorphic(number):
-        print(number, " is automorphic!")
-```
-
-    1  is automorphic!
-    5  is automorphic!
-    6  is automorphic!
-    25  is automorphic!
-    76  is automorphic!
-    376  is automorphic!
-    625  is automorphic!
