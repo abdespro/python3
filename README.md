@@ -783,6 +783,9 @@ else:
 
 
     The number is not a palindrome!
+
+
+
 ```python
 # pascal triangle 
 # using factorial & combination 
